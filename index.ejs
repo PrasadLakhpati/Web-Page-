@@ -1,0 +1,76 @@
+<%- include('layout') %>
+
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to Library Management System</h1>
+    <p class="lead">Manage your library's books, members, and loans efficiently.</p>
+    <hr class="my-4">
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Books Management</h5>
+                <p class="card-text">Add, edit, and manage your library's book collection.</p>
+                <a href="/books" class="btn btn-primary">Manage Books</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Members Management</h5>
+                <p class="card-text">Register and manage library members.</p>
+                <a href="/members" class="btn btn-primary">Manage Members</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Loans Management</h5>
+                <p class="card-text">Handle book loans and returns.</p>
+                <a href="/loans" class="btn btn-primary">Manage Loans</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Quick Actions</h5>
+                <div class="list-group">
+                    <a href="/books/add" class="list-group-item list-group-item-action">Add New Book</a>
+                    <a href="/members/add" class="list-group-item list-group-item-action">Register New Member</a>
+                    <a href="/loans/create" class="list-group-item list-group-item-action">Create New Loan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">System Statistics</h5>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Total Books
+                        <span class="badge bg-primary rounded-pill"><%= totalBooks %></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Total Members
+                        <span class="badge bg-primary rounded-pill"><%= totalMembers %></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Active Loans
+                        <span class="badge bg-primary rounded-pill"><%= activeLoans %></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> 
